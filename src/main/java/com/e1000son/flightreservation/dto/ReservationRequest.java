@@ -8,6 +8,7 @@ public class ReservationRequest {
     //Passenger details that comes from the request
     private String passengerFirstName;
     private String passengerLastName;
+    private String passengerMiddleName;
     private String passengerEmail;
     private String passengerPhone;
 
@@ -89,12 +90,21 @@ public class ReservationRequest {
         this.securityCode = securityCode;
     }
 
+    public String getPassengerMiddleName() {
+        return passengerMiddleName;
+    }
+
+    public void setPassengerMiddleName(String passengerMiddleName) {
+        this.passengerMiddleName = passengerMiddleName;
+    }
+
     @Override
     public String toString() {
         return "ReservationRequest{" +
                 "flightId=" + flightId +
                 ", passengerFirstName='" + passengerFirstName + '\'' +
                 ", passengerLastName='" + passengerLastName + '\'' +
+                ", passengerMiddleName='" + passengerMiddleName + '\'' +
                 ", passengerEmail='" + passengerEmail + '\'' +
                 ", passengerPhone='" + passengerPhone + '\'' +
                 ", nameOnTheCard='" + nameOnTheCard + '\'' +
