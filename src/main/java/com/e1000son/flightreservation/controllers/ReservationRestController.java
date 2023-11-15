@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
+
 @RestController
 public class ReservationRestController {
     @Autowired
@@ -18,11 +20,13 @@ public class ReservationRestController {
     public Reservation findReservation(@PathVariable("id") Long id){
         return reservationRepository.findById(id).get();
     }
+
     @RequestMapping("/reservations")
     public Reservation updateReservation(@RequestBody ReservationUpdateRequest request){
         Reservation dbReservation = reservationRepository.findById(request.getId()).orElseThrow();
         dbReservation.setNumberOfBags(request.getNumberOfBags());
         dbReservation.setCheckedIn(request.getCheckedIn());
+        dbReservation.setCreated(new Date());
         return reservationRepository.save(dbReservation);
     }
 }
