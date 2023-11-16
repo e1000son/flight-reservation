@@ -4,14 +4,12 @@ import com.e1000son.flightreservation.dto.ReservationUpdateRequest;
 import com.e1000son.flightreservation.entities.Reservation;
 import com.e1000son.flightreservation.repos.IReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 
 @RestController
+@CrossOrigin
 public class ReservationRestController {
     @Autowired
     private IReservationRepository reservationRepository;
