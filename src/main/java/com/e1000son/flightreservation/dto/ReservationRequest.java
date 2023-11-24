@@ -15,7 +15,7 @@ public class ReservationRequest {
     //Card details that comes from the request
     private String nameOnTheCard;
     private String cardNumber;
-    private Date expirationDate;
+    private String expirationDate;
     private String securityCode;
 
     public Long getFlightId() {
@@ -74,11 +74,11 @@ public class ReservationRequest {
         this.cardNumber = cardNumber;
     }
 
-    public Date getExpirationDate() {
+    public String getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(Date expirationDate) {
+    public void setExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
     }
 
