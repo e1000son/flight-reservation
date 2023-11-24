@@ -52,7 +52,7 @@ public class ReservationServiceImpl implements IReservationService{
         reservation.setCreated(new Date());
         Reservation savedReservation = reservationRepository.save(reservation);
 
-        String filePath = "/Users/e1000son/Documents/reserva" + savedReservation.getId() + ".pdf";
+        String filePath = "/Users/e1000son/Documents/reservas/reserva" + savedReservation.getId() + ".pdf";
         pdfGenerator.generateItinerary(savedReservation, filePath);
         emailUtil.sendItinerary(passenger.getEmail(), filePath);
 
