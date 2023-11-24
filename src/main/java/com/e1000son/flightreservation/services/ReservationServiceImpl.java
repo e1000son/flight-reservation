@@ -7,6 +7,8 @@ import com.e1000son.flightreservation.entities.Reservation;
 import com.e1000son.flightreservation.repos.IFlightRepository;
 import com.e1000son.flightreservation.repos.IPassengerRepository;
 import com.e1000son.flightreservation.repos.IReservationRepository;
+import com.e1000son.flightreservation.util.EmailUtil;
+import com.e1000son.flightreservation.util.PDFGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,10 @@ public class ReservationServiceImpl implements IReservationService{
     private IPassengerRepository passengerRepository;
     @Autowired
     private IReservationRepository reservationRepository;
+    @Autowired
+    private PDFGenerator pdfGenerator;
+    @Autowired
+    private EmailUtil emailUtil;
     @Override
     public Reservation bookFlight(ReservationRequest reservationRequest) {
 
@@ -45,6 +51,10 @@ public class ReservationServiceImpl implements IReservationService{
         reservation.setCheckedIn(false);
         reservation.setCreated(new Date());
         Reservation savedReservation = reservationRepository.save(reservation);
+
+        String filePath = "/Users/e1000son/Documents/reserva" + savedReservation.getId() + ".pdf";
+        pdfGenerator.generateItinerary(savedReservation, filePath);
+        emailUtil.sendItinerary(passenger.getEmail(), filePath);
 
         return savedReservation;
     }
