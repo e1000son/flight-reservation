@@ -19,28 +19,32 @@ public class UserController {
     private static final Logger LOOGER = LoggerFactory.getLogger(UserController.class);
     @RequestMapping("/showReg")
     public String showRegistrationPage(){
+        LOOGER.info("Inside showRegistrationPage()");
         return "login/registerUser";
     }
 
     @RequestMapping(value = "/registerUser", method = RequestMethod.POST)
     public String saveUser(@ModelAttribute("user") User user, ModelMap modelMap){
+        LOOGER.info("Inside saveUser() " + user);
         userRepository.save(user);
         return "/login/login";
     }
 
     @RequestMapping("/showLogin")
     public String showLoginPage(){
+        LOOGER.info("Inside showLoginPage()");
         return "/login/login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam("email") String email, @RequestParam("password") String password,
     ModelMap modelMap){
-        LOOGER.error("ERROR");
-        LOOGER.warn("WARN");
-        LOOGER.info("INFO");
-        LOOGER.debug("DEBUG");
-        LOOGER.trace("TRACE");
+//        LOOGER.error("ERROR");
+//        LOOGER.warn("WARN");
+//        LOOGER.info("INFO");
+//        LOOGER.debug("DEBUG");
+//        LOOGER.trace("TRACE");
+        LOOGER.info("Inside login() and the email is " + email);
         User user = userRepository.findByEmail(email);
         if (user.getPassword().equals(password)){
             return "findFlights";
