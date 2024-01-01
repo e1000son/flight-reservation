@@ -2,6 +2,8 @@ package com.e1000son.flightreservation.controllers;
 
 import com.e1000son.flightreservation.entities.User;
 import com.e1000son.flightreservation.repos.IUserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
     @Autowired
     private IUserRepository userRepository;
+    private static final Logger LOOGER = LoggerFactory.getLogger(UserController.class);
     @RequestMapping("/showReg")
     public String showRegistrationPage(){
         return "login/registerUser";
@@ -33,6 +36,11 @@ public class UserController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestParam("email") String email, @RequestParam("password") String password,
     ModelMap modelMap){
+        LOOGER.error("ERROR");
+        LOOGER.warn("WARN");
+        LOOGER.info("INFO");
+        LOOGER.debug("DEBUG");
+        LOOGER.trace("TRACE");
         User user = userRepository.findByEmail(email);
         if (user.getPassword().equals(password)){
             return "findFlights";
