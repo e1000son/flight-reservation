@@ -23,7 +23,7 @@ public class FlightController {
     public String findFlights(@RequestParam("from") String from, @RequestParam("to") String to,
                               @RequestParam("departureDate") @DateTimeFormat(pattern = "dd-MM-yyyy") Date departureDate,
                               ModelMap modelMap){
-        LOGGER.info("Inside findFlights(). From: {from}. To: {to}. Departure date: {departureDate}");
+        LOGGER.info("Inside findFlights(). From: " + from + ". To: " + to + ". Departure date: " + departureDate);
         List<Flight> flights = flightRepository.findFlights(from, to, departureDate);
         modelMap.addAttribute("flights", flights);
 
