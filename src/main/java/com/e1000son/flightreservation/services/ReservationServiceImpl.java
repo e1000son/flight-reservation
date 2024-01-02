@@ -1,6 +1,5 @@
 package com.e1000son.flightreservation.services;
 
-import com.e1000son.flightreservation.controllers.ReservationController;
 import com.e1000son.flightreservation.dto.ReservationRequest;
 import com.e1000son.flightreservation.entities.Flight;
 import com.e1000son.flightreservation.entities.Passenger;
@@ -13,12 +12,15 @@ import com.e1000son.flightreservation.util.PDFGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
 public class ReservationServiceImpl implements IReservationService{
+    @Value("${com.e1000son.flightreservation.itinerary.dirpath}")
+    public String ITINERARY_DIR;
     @Autowired
     private IFlightRepository flightRepository;
     @Autowired
@@ -59,7 +61,7 @@ public class ReservationServiceImpl implements IReservationService{
         Reservation savedReservation = reservationRepository.save(reservation);
         LOGGER.info("Saved Reservation: " + savedReservation);
 
-        String filePath = "/Users/e1000son/Documents/reservas/reserva" + savedReservation.getId() + ".pdf";
+        String filePath = ITINERARY_DIR + savedReservation.getId() + ".pdf";
         LOGGER.info("Generating Intinerary: " + filePath);
         pdfGenerator.generateItinerary(savedReservation, filePath);
         LOGGER.info("Emailing the itinerary...");
