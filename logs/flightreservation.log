@@ -1,29 +1,12 @@
-2024-01-01T22:06:43.092+02:00  INFO 5835 --- [main] c.e.f.FlightReservationApplication       : Starting FlightReservationApplication using Java 19.0.2 with PID 5835 (/Users/e1000son/Dropbox/Mine/03. Empresas/00. e1000son/01. 2023/Flight-Reservation-App/flight-reservation/target/classes started by e1000son in /Users/e1000son/Dropbox/Mine/03. Empresas/00. e1000son/01. 2023/Flight-Reservation-App/flight-reservation)
-2024-01-01T22:06:43.107+02:00  INFO 5835 --- [main] c.e.f.FlightReservationApplication       : No active profile set, falling back to 1 default profile: "default"
-2024-01-01T22:06:44.433+02:00  INFO 5835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-01-01T22:06:44.564+02:00  INFO 5835 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 4 JPA repository interfaces.
-2024-01-01T22:06:45.865+02:00  INFO 5835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2024-01-01T22:06:45.886+02:00  INFO 5835 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-01-01T22:06:45.886+02:00  INFO 5835 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
-2024-01-01T22:06:46.984+02:00  INFO 5835 --- [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2024-01-01T22:06:47.005+02:00  INFO 5835 --- [main] o.a.c.c.C.[.[.[.0/flight-reservation]    : Initializing Spring embedded WebApplicationContext
-2024-01-01T22:06:47.006+02:00  INFO 5835 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3752 ms
-2024-01-01T22:06:47.292+02:00  INFO 5835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-01-01T22:06:47.872+02:00  INFO 5835 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22a260ff
-2024-01-01T22:06:47.876+02:00  INFO 5835 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-01-01T22:06:47.957+02:00  INFO 5835 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-01-01T22:06:48.111+02:00  INFO 5835 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
-2024-01-01T22:06:48.116+02:00  INFO 5835 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2024-01-01T22:06:49.056+02:00  INFO 5835 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-01-01T22:06:50.642+02:00  INFO 5835 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-01-01T22:06:50.647+02:00  INFO 5835 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-01-01T22:06:51.076+02:00  INFO 5835 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-01-01T22:06:51.922+02:00  WARN 5835 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-01-01T22:06:52.175+02:00  INFO 5835 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2024-01-01T22:06:52.509+02:00  INFO 5835 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/v1.0/flight-reservation'
-2024-01-01T22:06:52.521+02:00  INFO 5835 --- [main] c.e.f.FlightReservationApplication       : Started FlightReservationApplication in 10.797 seconds (process running for 11.725)
-2024-01-01T22:06:58.154+02:00  INFO 5835 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.0/flight-reservation]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-01-01T22:06:58.154+02:00  INFO 5835 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-01-01T22:06:58.157+02:00  INFO 5835 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-01-01T22:06:59.932+02:00  INFO 5835 --- [http-nio-8080-exec-2] c.e.f.controllers.UserController         : Inside showLoginPage()
-2024-01-01T22:07:04.214+02:00  INFO 5835 --- [http-nio-8080-exec-3] c.e.f.controllers.UserController         : Inside login() and the email is beiontas@beivontas
+2024-01-02T00:27:36.084+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h47m57s723ms).
+2024-01-02T01:22:12.535+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m36s442ms).
+2024-01-02T02:16:26.739+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m14s210ms).
+2024-01-02T03:10:34.457+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m7s720ms).
+2024-01-02T04:58:31.148+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h47m56s535ms).
+2024-01-02T05:00:13.886+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m42s892ms).
+2024-01-02T05:47:15.057+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47m1s174ms).
+2024-01-02T06:03:47.688+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m32s631ms).
+2024-01-02T06:13:17.568+02:00  WARN 5835 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s738ms), soft-evicting connections from pool.
+2024-01-02T06:39:45.996+02:00  INFO 5835 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-01-02T06:39:46.019+02:00  INFO 5835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-01-02T06:39:46.039+02:00  INFO 5835 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
