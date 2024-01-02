@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <configuration>
-    <property name="LOG_DIR" value="/Users/e1000son/Dropbox/Mine/03. Empresas/00. e1000son/01. 2023/Flight-Reservation-App/flight-reservation/logs/" />
+    <property name="LOG_DIR" value="/Users/e1000son/Dropbox/Mine/03. Empresas/00. e1000son/01. 2023/Flight-Reservation-App/flight-reservation/logs" />
     <property name="FILE_PREFIX" value="flightreservation" />
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -20,4 +20,14 @@
         </rollingPolicy>
 
     </appender>
+
+<!--    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%-5relative %-5level %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+    <root level="info">
+        <appender-ref ref="FILE" />
+    </root>
 </configuration>
