@@ -6,6 +6,7 @@ com/e1000son/flightreservation/entities/Passenger.class
 com/e1000son/flightreservation/repos/IReservationRepository.class
 com/e1000son/flightreservation/controllers/FlightController.class
 com/e1000son/flightreservation/services/ReservationServiceImpl.class
+com/e1000son/flightreservation/util/PDFGenerator.class
 com/e1000son/flightreservation/services/IReservationService.class
 com/e1000son/flightreservation/dto/ReservationUpdateRequest.class
 com/e1000son/flightreservation/repos/IPassengerRepository.class
@@ -16,3 +17,4 @@ com/e1000son/flightreservation/entities/Reservation.class
 com/e1000son/flightreservation/FlightReservationApplication.class
 com/e1000son/flightreservation/controllers/UserController.class
 com/e1000son/flightreservation/entities/Flight.class
+com/e1000son/flightreservation/util/EmailUtil.class

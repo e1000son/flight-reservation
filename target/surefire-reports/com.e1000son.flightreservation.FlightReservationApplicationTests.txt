@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.e1000son.flightreservation.FlightReservationApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.386 s - in com.e1000son.flightreservation.FlightReservationApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.03 s - in com.e1000son.flightreservation.FlightReservationApplicationTests
